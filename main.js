@@ -13,6 +13,14 @@ const header = document.querySelector(".day");
 const time = document.querySelector(".time");
 const info = document.querySelector(".info");
 
+//load all images
+const allImg = Object.values(images).flat();
+
+allImg.forEach(el => {
+  const pic = new Image();
+  pic.src = `./images/${el}.jpg`;
+});
+
 //remove the info container after 5s
 setTimeout(() => {
   info.remove();
@@ -90,7 +98,6 @@ let imgTimer;
 
 //play all the images when clicked on body
 bg.addEventListener("click", () => {
-  
   console.log("you clicked me", imgTimer);
 
   if (!isPlayed) {
@@ -99,7 +106,7 @@ bg.addEventListener("click", () => {
     let time = new Date().getHours();
     changeImage(++time);
     document.documentElement.requestFullscreen();
-   
+
     //timer of 2.5s to change image
     imgTimer = setInterval(() => {
       changeImage(time);

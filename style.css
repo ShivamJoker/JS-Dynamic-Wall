@@ -60,9 +60,18 @@ html {
 }
 .info {
     position: absolute;
+    font-family: "Nunito Sans", sans-serif;
     bottom: 50px;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 3em;
+    color: rgba(0, 0, 0, 0.829);
+    background: rgba(255, 255, 255, 0.673);
+    padding: 10px;
+    font-size: 2em;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
+}
+
+.info p{
+    margin: 0;
+    font-size: 1.5rem;
 }
